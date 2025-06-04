@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using HarmonyLib;
+using Photon.Pun.Simple;
 using Photon.Pun.Simple.Pooling;
 
 namespace DnD.Extensions
@@ -8,18 +9,23 @@ namespace DnD.Extensions
     [Serializable]
     public class CharacterStatModifiersAdditionalData
     {
-        public int str, dex, con, lnt, wis, chr, maxPoints, freePoints;
+        public int str, dex, con, lnt, wis, chr, xp, level;
+        public float magDmg, xpRate;
+        public string playerClass;
 
         public CharacterStatModifiersAdditionalData()
         {
-            str = 5;
-            dex = 5;
-            con = 5;
-            lnt = 5;
-            wis = 5;
-            chr = 5;
-            maxPoints = 30;
-            freePoints = 0;
+            str = 1;
+            dex = 1;
+            con = 1;
+            lnt = 1;
+            wis = 1;
+            chr = 1;
+            xp = 0;
+            level = 1;
+            magDmg = 1f;
+            xpRate = 1f;
+            playerClass = "";
         }
     }
     public static class CharacterStatModifiersExtension
@@ -47,14 +53,17 @@ namespace DnD.Extensions
     {
         private static void Prefix(CharacterStatModifiers __instance)
         {
-            __instance.GetAdditionalData().str = 5;
-            __instance.GetAdditionalData().dex = 5;
-            __instance.GetAdditionalData().con = 5;
-            __instance.GetAdditionalData().lnt = 5;
-            __instance.GetAdditionalData().wis = 5;
-            __instance.GetAdditionalData().chr = 5;
-            __instance.GetAdditionalData().maxPoints = 30;
-            __instance.GetAdditionalData().freePoints = 0;
+            __instance.GetAdditionalData().str = 0;
+            __instance.GetAdditionalData().dex = 0;
+            __instance.GetAdditionalData().con = 0;
+            __instance.GetAdditionalData().lnt = 0;
+            __instance.GetAdditionalData().wis = 0;
+            __instance.GetAdditionalData().chr = 0;
+            __instance.GetAdditionalData().xp = 0;
+            __instance.GetAdditionalData().level = 1;
+            __instance.GetAdditionalData().magDmg = 1f;
+            __instance.GetAdditionalData().xpRate = 1f;
+            __instance.GetAdditionalData().playerClass = "";
         }
     }
 }

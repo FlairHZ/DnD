@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using DnDConfig;
 
-namespace FlairsCards.Utilities
+namespace DnD.Utilities
 {
-    internal class DnDDebug
+    internal class DnDebug
     {
         public static void Log(object message)
         {

@@ -3,7 +3,11 @@
     "references": [
         "UnboundLib",
         "ModdingUtils",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "RarityLib",
+        "WillsWackyManagers",
+        "ClassesManagerReborn",
+        "ModsPlus"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
@@ -14,7 +18,13 @@
         "0Harmony.dll",
         "BepInEx.dll",
         "Assembly-CSharp.dll",
-        "InControl.dll"
+        "InControl.dll",
+        "PhotonRealtime.dll",
+        "Photon3Unity3D.dll",
+        "PhotonChat.dll",
+        "PhotonUnityNetworking.dll",
+        "PhotonUnityNetworking.Demos.dll",
+        "PhotonUnityNetworking.Utilities.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": []
